@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+      @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .navbar {
+            border: 1px solid #D4AF37 !important;
+            position: fixed !important;
+            top: 12px !important;                
+            left: 50% !important;
+            transform: translateX(-50%) !important; 
+            width: 92% !important;               
+            max-width: 1250px !important;
+            height: 60px !important; 
+            min-height: 60px !important;             
+            background: rgba(0,0,0,0.2) !important;
+            backdrop-filter: blur(10px) !important;
+           -webkit-backdrop-filter: blur(10px) !important;
+            border-radius: 30px !important;      
+            padding: 0 25px !important;
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5) !important;
+            z-index: 1000 !important;
+        }
+
+        .logo-link img {
+            margin-top: 10px !important;
+            height: 60px !important;
+            width: auto !important;
+            display: block !important;
+            mix-blend-mode: screen !important;
+        }
+
+        #navMenu div {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-link-gold {
+            color: #FFDF4F !important;
+            text-decoration: none !important;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-link-gold:hover {
+            color: #FFFFFF !important;
+        }
+
+        .mobile-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 22px;
+            color: #D4AF37;
+        }
+
+        .mobile-close {
+            display: none !important;
+        }
+
+        
+        @media screen and (max-width: 768px) {
+            .mobile-toggle {
+                display: block !important;
+            }
+
+            .navbar {
+                padding: 6px 18px !important;
+                border-radius: 30px !important;
+            }
+
+            #navMenu {
+                display: none !important;
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 80% !important;
+                height: 100vh !important;
+                background-color: #0b0f17 !important;
+                padding: 30px 20px !important;
+                box-shadow: 5px 0 25px rgba(0,0,0,0.8);
+                z-index: 99999 !important;
+            }
+
+            #navMenu.show-menu {
+                display: block !important;
+            }
+
+            .mobile-close {
+                display: block !important;
+                text-align: right !important;
+                font-size: 28px !important;
+                color: #FFDF4F !important;
+                cursor: pointer !important;
+                margin-bottom: 20px !important;
+            }
+
+            #navMenu div {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 22px !important;
+            }
+
+            .nav-link-gold {
+                font-size: 16px !important;
+                font-weight: 600 !important;
+                background: none !important;
+                border: none !important;
+                padding: 0 !important;
+                text-align: left !important;
+            }
+        }
+        
+        
+    </style>
+</head>
+<body style="background-color: #0d1117 !important; color: #ffffff !important; margin: 0 !important; padding: 0 !important; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
+
+
+    <header class="navbar">
+        <a href="index" class="logo-link">
+            <img src="new.png" alt="Kubera AI Planet" class="logo-img" style="height: 65px !important; width: auto;margin-top: 12px !important;margin-bottom: 8px !important;">
+        </a>
+        
+        <div class="mobile-toggle" onclick="toggleMenu()">
+            &#9776;
+        </div>
+
+        <nav id="navMenu">
+            
+            <div class="mobile-close" onclick="toggleMenu()">✕</div>
+
+            <div>
+                <a href="kubera-ai-planet" class="nav-link-gold">Kubera AI Planet</a>
+                <a href="shukra-infinity-nexus" class="nav-link-gold">Shukra Infinity Nexus</a>
+                <a href="aboutus" class="nav-link-gold">About Us</a>
+                <a href="#" class="nav-link-gold">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+    <div style="height: 80px !important; width: 100%;"></div>
+    
+    <main class="animate-fade" style="padding: 10px 20px !important; display: flex !important; justify-content: center !important; align-items: flex-start !important; flex-grow: 1; margin-top: 15px !important;">
+        <div class="content-box animate-fade" style="max-width: 900px; width: 100%;">
+            <h1 style="color: #FFDF4F; margin-top: 0; font-size: 2.2rem; display: flex; align-items: center; gap: 10px;">
+                ✨ About Us
+            </h1>
+            <p style="font-size: 1.05rem; line-height: 1.8; color: #e0e0e0; margin-top: 10px;">
+                Discover who we are and our vision for driving next-generation digital transformation. We blend artificial intelligence with robust global systems to scale businesses to new heights.
+            </p>
+            
+            <h3 style="color: #FFDF4F; margin-top: 25px; font-size: 1.3rem;">Our Mission:</h3>
+            <p style="line-height: 1.8; color: #cccccc; margin-top: 5px;">
+                To empower global enterprises with intelligence-driven platforms, streamline complex operations, and catalyze exponential commercial growth.
+            </p>
+        </div>
+    </main>
+
+
+    <footer style="background: linear-gradient(135deg, #EAECEC 0%, #BBC2CC 50%, #8F8F8F 100%); color: #333333; padding: 12px 5px; text-align: center; font-weight: bold; font-size: 13px; font-family: Arial, sans-serif; width: 100%;">
+       &copy; 2026 KNGPL. All Rights Reserved. 
+    </footer>
+
+  
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("navMenu");
+            nav.classList.toggle("show-menu");
+        }
+    </script>
+
+</body>
+</html>
