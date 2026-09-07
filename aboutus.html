@@ -147,12 +147,12 @@
         
     </style>
 </head>
-<body style="background-color: #0d1117 !important; color: #ffffff !important; margin: 0 !important; padding: 0 !important; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
+       <body style="background-color: #0d1117 !important; color: #ffffff !important; margin: 0 !important; padding: 0 !important; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
 
 
-    <header class="navbar">
+      <header class="navbar">
         <a href="index" class="logo-link">
-            <img src="new.png" alt="Kubera AI Planet" class="logo-img" style="height: 65px !important; width: auto;margin-top: 12px !important;margin-bottom: 8px !important;">
+              <img src="new.png" alt="Kubera AI Planet" class="logo-img" style="height: 65px !important; width: auto;margin-top: 12px !important;margin-bottom: 8px !important;">
         </a>
         
         <div class="mobile-toggle" onclick="toggleMenu()">
@@ -171,6 +171,7 @@
             </div>
         </nav>
     </header>
+    
     <div style="height: 80px !important;margin-top: 60px;  width: 100%;"></div>
     
     <main class="animate-fade" style="padding: 10px 20px !important; display: flex !important; justify-content: center !important; align-items: flex-start !important; flex-grow: 1; margin-top: 15px !important;">
@@ -234,7 +235,8 @@
     <footer style="background: linear-gradient(135deg, #EAECEC 0%, #BBC2CC 50%, #8F8F8F 100%); color: #333333; padding: 12px 5px; text-align: center; font-weight: bold; font-size: 13px; font-family: Arial, sans-serif; width: 100%;">
        &copy; 2026 KNGPL. All Rights Reserved. 
     </footer>
-
+    
+    
   
     <script>
         function toggleMenu() {
@@ -242,6 +244,28 @@
             nav.classList.toggle("show-menu");
         }
     </script>
+   <audio id="wa-pop-sound" src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3" preload="auto"></audio>
+
+<div id="wa-chat-box" style="display:none; position:fixed; bottom:90px; right:20px; width:300px; background:#ffffff; border-radius:12px; box-shadow:0 5px 25px rgba(0,0,0,0.25); z-index:99999; overflow:hidden; font-family:Arial, sans-serif;">
+  <div style="background:#075e54; color:#ffffff; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+    <span style="font-weight:bold; font-size:14px;">Welcome to KNGPL</span>
+    <span onclick="document.getElementById('wa-chat-box').style.display='none'" style="cursor:pointer; font-size:18px; font-weight:bold;">✕</span>
+  </div>
+  <div style="padding:15px; background:#e5ddd5;">
+    <div style="background:#ffffff; padding:10px 12px; border-radius:8px; font-size:13px; color:#111827; max-width:85%; box-shadow:0 1px 2px rgba(0,0,0,0.15);">
+      <b style="color:#075e54;">KNGPL Support</b><br>
+      How can I help you? :)
+    </div>
+  </div>
+  <div style="padding:12px; background:#ffffff; text-align:center;">
+    <a href="https://wa.me/447365756485?text=Hello%20KNGPL" target="_blank" style="display:inline-block; width:85%; background:#25d366; color:#ffffff; text-decoration:none; padding:10px 0; border-radius:25px; font-weight:bold; font-size:13px;">Start Chat</a>
+  </div>
+</div>
+
+
+<div onclick="var b=document.getElementById('wa-chat-box'); var isHidden=(b.style.display==='none'||b.style.display===''); if(isHidden){ b.style.display='block'; var s=document.getElementById('wa-pop-sound'); s.currentTime=0; s.play(); }else{ b.style.display='none'; }" style="position:fixed; bottom:20px; right:20px; width:58px; height:58px; background:#25d366; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,0.3); z-index:99999;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="34" height="34" alt="WhatsApp">
+</div>
 
 </body>
 </html>
