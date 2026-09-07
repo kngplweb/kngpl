@@ -5,20 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title>KNGPL</title>
     <link rel="stylesheet" href="style.css">
+   <meta property="og:title" content="KNGPL">
+   <meta property="og:description" content="Welcome to KNGPL">
+   <meta property="og:url" content="https://kngpl.com/">
+   <meta property="og:image" content="https://kngpl.com/thumb.jpg?v=2">
+   <meta property="og:image:secure_url" content="https://kngpl.com/thumb.jpg?v=2">
+   <meta property="og:image:type" content="image/jpeg">
+   <meta property="og:type" content="website">
     
 </head>
 <body>
 
     
-   <div class="video-container">
-        <video class="desktop-video" autoplay muted loop playsinline webkit-playsinline disablePictureInPicture style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; height: 100dvh; object-fit: cover; object-position: center; z-index: -999; pointer-events: none;">
-    <source src="bg.mp4" type="video/mp4">
-</video>
-     <video class="mobile-video" autoplay muted loop playsinline webkit-playsinline>
-      <source src="bg1.mp4" type="video/mp4">
-     </video>
-    </div>
+  <div class="video-container">
+    <video class="desktop-video" autoplay muted loop playsinline webkit-playsinline>
+        <source src="bg.mp4" type="video/mp4">
+    </video>
 
+    <video class="mobile-video" autoplay muted loop playsinline webkit-playsinline>
+        <source src="bg1.mp4" type="video/mp4">
+    </video>
+</div>
       <header class="navbar">
         <a href="index" class="logo-link">
             <img src="new.png" alt="Kubera AI Planet" class="logo-img" style="height: 65px !important; width: auto;margin-top: 12px !important;margin-bottom: 8px !important;">
@@ -216,7 +223,10 @@
           Tell us about your business. A KNGPL strategist will follow up within 2 business days.
         </p>
 
-        <form id="kngpl-blueprint-form" style="display: flex; flex-direction: column; gap: 20px; font-family: 'Inter', sans-serif;">
+        <form action="https://api.web3forms.com/submit" method="POST" id="kngpl-blueprint-form" style="display: flex; flex-direction: column; gap: 20px; font-family: 'Inter', sans-serif;">
+           <input type="hidden" name="access_key" value="607bbb3f-0962-434a-a680-421fc45d029f">
+           <input type="hidden" name="redirect" value="https://web3forms.com/success">
+           <input type="hidden" name="subject" value="New Inquiry from Index Page">
           
           
           <div style="display: flex; gap: 20px; flex-wrap: wrap;">
@@ -278,6 +288,7 @@
 <footer class="site-footer">
         <span>&copy; 2026 KNGPL. All rights reserved. </span>
     </footer>
+   
 
    
     <script>
@@ -286,8 +297,34 @@
             menu.classList.toggle('active');
         }
     </script>
+    <audio id="wa-pop-sound" src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3" preload="auto"></audio>
+
+<div id="wa-chat-box" style="display:none; position:fixed; bottom:90px; right:20px; width:300px; background:#ffffff; border-radius:12px; box-shadow:0 5px 25px rgba(0,0,0,0.25); z-index:99999; overflow:hidden; font-family:Arial, sans-serif;">
+  <div style="background:#075e54; color:#ffffff; padding:12px 16px; display:flex; justify-content:space-between; align-items:center;">
+    <span style="font-weight:bold; font-size:14px;">Welcome to KNGPL</span>
+    <span onclick="document.getElementById('wa-chat-box').style.display='none'" style="cursor:pointer; font-size:18px; font-weight:bold;">✕</span>
+  </div>
+  <div style="padding:15px; background:#e5ddd5;">
+    <div style="background:#ffffff; padding:10px 12px; border-radius:8px; font-size:13px; color:#111827; max-width:85%; box-shadow:0 1px 2px rgba(0,0,0,0.15);">
+      <b style="color:#075e54;">KNGPL Support</b><br>
+      How can I help you? :)
+    </div>
+  </div>
+  <div style="padding:12px; background:#ffffff; text-align:center;">
+    <a href="https://wa.me/447365756485?text=Hello%20KNGPL" target="_blank" style="display:inline-block; width:85%; background:#25d366; color:#ffffff; text-decoration:none; padding:10px 0; border-radius:25px; font-weight:bold; font-size:13px;">Start Chat</a>
+  </div>
+</div>
+
+
+<div onclick="var b=document.getElementById('wa-chat-box'); var isHidden=(b.style.display==='none'||b.style.display===''); if(isHidden){ b.style.display='block'; var s=document.getElementById('wa-pop-sound'); s.currentTime=0; s.play(); }else{ b.style.display='none'; }" style="position:fixed; bottom:20px; right:20px; width:58px; height:58px; background:#25d366; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,0.3); z-index:99999;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="34" height="34" alt="WhatsApp">
+</div>
 </body>
 </html> 
+
+ 
+ 
+ 
 
  
  
