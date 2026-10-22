@@ -76,7 +76,7 @@
     </div>
 
     <main class="main-content">
-        <section style="position: absolute !important; top: 100vh !important; left: 0 !important; width: 100% !important; background-color: #0b0c10 !important; padding: 60px 24px; z-index: 10 !important; box-sizing: border-box;">
+        <section style="position: relative !important; top: 100vh !important; left: 0 !important; width: 100% !important; background-color: #0b0c10 !important; padding: 60px 24px; z-index: 10 !important; box-sizing: border-box;">
             <div style="max-width: 1180px; margin: 0 auto;">
                 <span style="font-family: 'JetBrains Mono', monospace; margin-top:-30px; font-size: 0.8rem; color:#FF6A00 !important;font-weight:normal; letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 12px;">
                     KNGPL — HOLDING FOR INTELLIGENT GLOBAL GROWTH
@@ -280,12 +280,7 @@
         </section>
     </main>
 
-
-    <footer class="site-footer">
-        <span>&copy; 2026 KNGPL. All rights reserved. </span>
-    </footer>
-
-    <script>
+<script>
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-accordion-menu');
             menu.classList.toggle('active');
@@ -762,7 +757,7 @@ a[href*="wa.me"] {
     document.head.appendChild(styleTag);
     });
     </script>
-   
+   <div id="kngpl-cookie-overlay" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.7); z-index: 999998;"></div>
 <div id="kngpl-cookie-banner" style="position: fixed; bottom: 60px !important; left: 0; width: 100%; background: #111318; color: #ffffff; padding: 4px 20px; box-sizing: border-box; box-shadow: 0 -4px 15px rgba(0,0,0,0.5); z-index: 999999; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-family: system-ui, -apple-system, sans-serif;">
     
    
@@ -815,26 +810,37 @@ a[href*="wa.me"] {
     function handleKngplCookie(action) {
         const banner = document.getElementById('kngpl-cookie-banner');
         const modal = document.getElementById('kngpl-manage-modal');
-        
+        const overlay = document.getElementById('kngpl-cookie-overlay');
+
         if (action === 'accept') {
             banner.style.display = 'none';
+            if (overlay) overlay.style.display = 'none';
         } else if (action === 'disable') {
             banner.style.display = 'none';
+            if (overlay) overlay.style.display = 'none';
         } else if (action === 'manage') {
-            modal.style.display = 'flex'; 
+            modal.style.display = 'flex';
         }
     }
 
     function closeManageModal() {
-        document.getElementById('kngpl-manage-modal').style.display = 'none';
+        const modal = document.getElementById('kngpl-manage-modal');
+        const overlay = document.getElementById('kngpl-cookie-overlay');
+        if (modal) modal.style.display = 'none';
+        if (overlay) overlay.style.display = 'none';
     }
 
     function saveManagePreferences() {
-        document.getElementById('kngpl-manage-modal').style.display = 'none';
-        document.getElementById('kngpl-cookie-banner').style.display = 'none';
+        const modal = document.getElementById('kngpl-manage-modal');
+        const banner = document.getElementById('kngpl-cookie-banner');
+        const overlay = document.getElementById('kngpl-cookie-overlay');
+        if (modal) modal.style.display = 'none';
+        if (banner) banner.style.display = 'none';
+        if (overlay) overlay.style.display = 'none';
     }
 </script>
-
-    
+      <footer class="site-footer">
+        <span>&copy; 2026 KNGPL. All rights reserved. </span>
+    </footer>
 </body>
 </html>
